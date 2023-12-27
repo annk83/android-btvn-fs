@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Base.Theme.FileBrowser"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/folder_name"
+        android:layout_width="360dp"
+        android:layout_height="48dp"
+        android:gravity="left|center_vertical"
+        android:text="TextView"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/folder_action"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_weight="1"
+        android:background="@drawable/round"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="..."
+        app:iconPadding="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/folder_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/folder_name"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="..." />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/folder_list"
+        android:layout_width="409dp"
+        android:layout_height="681dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/folder_name" />
+</androidx.constraintlayout.widget.ConstraintLayout>
